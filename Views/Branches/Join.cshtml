@@ -1,0 +1,26 @@
+﻿@model Application.Models.Branch
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+<p>Twoja aplikacja została przesłana do koordynatora</p>
+
+<h4>List of users in this role</h4>
+@if (ViewBag.UserCount == 0)
+{
+    <hr />
+    <p>No users found in this department.</p>
+}
+<table class="table">
+    @foreach (var item in ViewBag.Users)
+    {
+        <tr>
+            <td>
+                @item.UserName
+            </td>
+        </tr>
+    }
+</table>

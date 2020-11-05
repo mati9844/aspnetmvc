@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Application.Areas.Identity.Data.ApplicationUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Admin Panel</h1>
+
+<div class="card-deck">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Oddziały</h5>
+            <p class="card-text">Zarządzaj oddziałami swojej organizacji. Mianuj lidera oraz aktualizuj informacje o jednostce.</p>
+            <a class="btn btn-secondary" asp-controller="Branches" asp-action="AdminIndex">Branches</a>
+            <a class="btn btn-secondary" asp-controller="Role" asp-action="Index">RoleManager</a>
+
+        </div>
+
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Zadania</h5>
+            <p class="card-text">Przydzielaj użytkownikom zadania. Kontroluj i modyfikuj wymagania, aby osiągnać jak najlepszy rezultat.</p>
+            <a type="button" class="btn btn-secondary" asp-controller="Taskers" asp-action="Index">Tasker</a>
+        </div>
+
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Faktury</h5>
+            <p class="card-text">Zarządzaj finansami organizacji. Rozliczaj faktury oraz kontroluj wydatki</p>
+            <a type="button" class="btn btn-secondary" asp-controller="Invoices" asp-action="Index">Invoices</a>
+
+        </div>
+
+    </div>
+</div>
+
+
+<h1>All Users</h1>
+<a asp-action="Create">Create New</a>
+
+<table class="table">
+    <tr><th>ID</th><th>Name</th><th>Email</th><th>Update</th><th>Delete</th></tr>
+    @foreach (Application.Areas.Identity.Data.ApplicationUser user in Model)
+    {
+        <tr>
+            <td>@user.Id</td>
+            <td>@user.UserName</td>
+            <td>@user.Email</td>
+            <td>
+                <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@user.Id">
+                    Update
+                </a>
+            </td>
+            <td>
+                <form asp-action="Delete" asp-route-id="@user.Id" method="post">
+                    <button type="submit" class="btn btn-sm btn-danger">
+                        Delete
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+
+

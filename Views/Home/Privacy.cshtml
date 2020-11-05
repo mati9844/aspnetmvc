@@ -1,0 +1,122 @@
+﻿@{
+    ViewData["Title"] = "Kontakt";
+}
+<h1>@ViewData["Title"]</h1>
+
+<style>
+    .map-container-6{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+    .map-container-6 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+</style>
+
+<!--Section: Contact v.1-->
+<section class="section pb-5">
+
+    <!--Section heading-->
+    <!--Section description-->
+    <p class="section-description pb-4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error
+        amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a
+        pariatur accusamus veniam.
+    </p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-5 mb-4">
+
+            <!--Form with header-->
+            <div class="card">
+
+                <div class="card-body">
+                    <!--Header-->
+                    <div class="form-header blue accent-1">
+                        <h3><i class="fas fa-envelope"></i> Write to us:</h3>
+                    </div>
+
+                    <p>We'll write rarely, but with only the best content.</p>
+                    <br>
+
+                    <!--Body-->
+                    <div class="md-form">
+                        <label for="form-name">Your name</label>
+                        <i class="fas fa-user prefix grey-text"></i>
+                        <input type="text" id="form-name" class="form-control">
+                    </div>
+
+                    <div class="md-form">
+                        <label for="form-email">Your email</label>
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input type="text" id="form-email" class="form-control">
+                    </div>
+
+                    <div class="md-form">
+                        <label for="form-Subject">Subject</label>
+                        <i class="fas fa-tag prefix grey-text"></i>
+                        <input type="text" id="form-Subject" class="form-control">
+                    </div>
+
+                    <div class="md-form">
+                        <label for="form-text">Message</label>
+                        <i class="fas fa-pencil-alt prefix grey-text"></i>
+                        <textarea id="form-text" class="form-control md-textarea" rows="3"></textarea>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--Form with header-->
+
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-7">
+
+            <!--Google map-->
+            <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.869240606858!2d19.449528915666725!3d51.75371457967635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a34d85d1152f3%3A0xbe75c3beee4bad56!2zUG9saXRlY2huaWthIMWBw7Nkemth!5e0!3m2!1spl!2sus!4v1600965455576!5m2!1spl!2sus" 
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+
+            <br>
+            <!--Buttons-->
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
+                    <p>San Francisco, CA 94126</p>
+                    <p>United States</p>
+                </div>
+
+                <div class="col-md-4">
+                    <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
+                    <p>+ 01 234 567 89</p>
+                    <p>Mon - Fri, 8:00-22:00</p>
+                </div>
+
+                <div class="col-md-4">
+                    <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
+                    <p>info@gmail.com</p>
+                    <p>sale@gmail.com</p>
+                </div>
+            </div>
+
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
